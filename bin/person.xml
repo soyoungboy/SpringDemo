@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="person" class="com.soyoungboy.bean.Person">
+		<property name="lastName" value="wang"></property>
+		<property name="firstName" value="fubin"></property>
+		<property name="age" value="18"></property>
+		<property name="gender" value="man"></property>
+
+	</bean>
+	
+	<!-- p标签 -->
+		<bean 
+			id="person04"
+			class="com.soyoungboy.bean.Person"
+			p:age="18"
+			p:lastName="Li"
+			p:firstName="qiongqiong"
+			p:gender="woman"
+		>
+	</bean>
+	<!-- 通过构造器为bean的属性赋值 -->
+	<bean 
+	id="person05"
+	class="com.soyoungboy.bean.Person">
+		<constructor-arg name="firstName" value="heng"></constructor-arg>
+		<constructor-arg name="lastName" value="luo"></constructor-arg>
+		<constructor-arg name="age" value="18"></constructor-arg>
+		<constructor-arg name="gender" value="man"></constructor-arg>
+	</bean>
+</beans>
